@@ -1,0 +1,21 @@
+{
+  "name": "steve-policjant-v2",
+  "version": "2.2.1",
+  "description": "",
+  "main": "steve.js",
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "axios": "^0.24.0",
+    "discord-api-types": "^0.25.2",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "microtime": "^3.0.0",
+    "nope.db": "^0.0.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
