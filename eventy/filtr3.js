@@ -25,7 +25,7 @@ module.exports = {
                 );
     
                 await ch.send({ embeds: [izolatka] });
-                await sleep(18000000);
+                await sleep(1800000);
                 let role = message.member.guild.roles.cache.find(role => role.id === "821698344728002562");
                 let role2 = message.member.guild.roles.cache.find(role => role.id === "818531125819080736");
                 if (role) message.guild.members.cache.get(victim.id).roles.add(role);
