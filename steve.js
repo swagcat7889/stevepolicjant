@@ -65,4 +65,5 @@ client.on('messageCreate', async message => {
 process.on('unhandledRejection', async (a) => {
 	process.stdout.write(`${a.name}: ${a.message}\n`);
 });
+
 client.login(token);
