@@ -10,7 +10,7 @@ module.exports = {
         if (!message.content.startsWith('>>')) return;
         const cmd = message.content.slice(2);
         const out = await manager.process('pl', cmd);
-        message.reply(`⚠️ chatbot jest jeszcze w ostrej becie, używaj na własną odpowiedzialność!\n${out.answer}`);
+        message.reply(`⚠️ chatbot jest jeszcze w becie i umie tylko język Polski, używaj na własną odpowiedzialność!\n\n\nOdpowiedź:    ${out.answer}`);
     }
 };
 setInterval(async () => {
@@ -20,4 +20,4 @@ setInterval(async () => {
         h = ha;
         process.stdout.write('Hot model reloading\n');
     };
-}, 5000);
+}, 240000);
