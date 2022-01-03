@@ -13,13 +13,13 @@ module.exports = {
         if (message.content.toLowerCase().includes('kitoda')) return;
         if (message.content.toLowerCase().includes('904427822188212254')) return;
         if (message.channel.id == '818383017025601599' || message.channel.id == '830395657163636746') {
-            if (message.author.id === '804401104976216105') return;
+            // if (message.author.id === '804401104976216105') return;
             if (message.content.length == 0) return message.delete();
             if (!message.content.startsWith('%')) {
                 const embed = new MessageEmbed()
               .setTitle('Propozycja')
               .setDescription(message.content)
-              .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }), 'https://canary.discord.com/channels/818374882873442314/818382652338995210/909415814774542376')
+              .embedAuthorData(message.author.tag, message.author.avatarURL({ dynamic: true }), 'https://canary.discord.com/channels/818374882873442314/818382652338995210/909415814774542376')
               .setFooter('%tekst aby skomentować');
             await message.delete();
             let msg = await message.channel.send({ embeds: [embed] });
