@@ -19,7 +19,7 @@ module.exports = {
                 const embed = new MessageEmbed()
               .setTitle('Propozycja')
               .setDescription(message.content)
-              .embedAuthorData(message.author.tag, message.author.avatarURL({ dynamic: true }), 'https://canary.discord.com/channels/818374882873442314/818382652338995210/909415814774542376')
+              .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }), 'https://canary.discord.com/channels/818374882873442314/818382652338995210/909415814774542376')
               .setFooter('%tekst aby skomentować');
             await message.delete();
             let msg = await message.channel.send({ embeds: [embed] });
