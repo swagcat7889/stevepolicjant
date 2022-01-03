@@ -10,7 +10,7 @@ module.exports = {
 			if (message.content.includes(word)) return message.delete();
 			if (message.content.trim().includes(word)) return message.delete();
 			if (message.content.toLowerCase().includes(word)) return message.delete();
-			if (message.content.toUpperCase().inclues(word)) return message.delete();
+			if (message.content.toUpperCase().includes(word)) return message.delete();
 		}
     }
 }
