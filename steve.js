@@ -10,6 +10,8 @@ const db = new nopedb({
     seperator: ".",
     spaces: 2
 });
+const Keyv = require('keyv');
+global.keyv = new Keyv();
 const client = new Client({ intents: [32767]});
 client.commands = new Collection();
 const komendyFiles = fs.readdirSync('./komendy').filter(file => file.endsWith('.js'));
