@@ -5,7 +5,7 @@ const { prefix } = require('./config.json');
 require('dotenv').config();
 const { token } = process.env;
 const nopedb = require("nope.db");
-const db = new nopedb({
+global.db = new nopedb({
     path: "./datastore.json",
     seperator: ".",
     spaces: 2
@@ -41,7 +41,7 @@ for (const file of Events) {
 // });
 client.on('messageCreate', async message => {
     const { Permissions } = require('discord.js');
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
 
     // if (message.channel.id !== '818382652338995210') {
     //     if (message.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) {
